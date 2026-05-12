@@ -854,13 +854,9 @@ export async function runWifJwtBearerWrongAudience(
     authProvider: provider
   });
 
-  try {
-    await client.connect(transport);
-    await client.listTools();
-    await transport.close();
-  } catch {
-    // Expected — server rejects wrong audience
-  }
+  await client.connect(transport);
+  await client.listTools();
+  await transport.close();
 }
 
 export async function runWifJwtBearerMissingAssertion(
@@ -883,13 +879,9 @@ export async function runWifJwtBearerMissingAssertion(
     authProvider: provider
   });
 
-  try {
-    await client.connect(transport);
-    await client.listTools();
-    await transport.close();
-  } catch {
-    // Expected — server rejects missing assertion
-  }
+  await client.connect(transport);
+  await client.listTools();
+  await transport.close();
 }
 
 export async function runWifJwtBearerExpiredAssertion(
@@ -911,13 +903,9 @@ export async function runWifJwtBearerExpiredAssertion(
     authProvider: provider
   });
 
-  try {
-    await client.connect(transport);
-    await client.listTools();
-    await transport.close();
-  } catch {
-    // Expected — server rejects the expired assertion
-  }
+  await client.connect(transport);
+  await client.listTools();
+  await transport.close();
 }
 
 // ============================================================================
