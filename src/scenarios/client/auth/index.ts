@@ -24,6 +24,7 @@ import {
 import { ResourceMismatchScenario } from './resource-mismatch';
 import { PreRegistrationScenario } from './pre-registration';
 import { EnterpriseManagedAuthorizationScenario } from './enterprise-managed-authorization';
+import { WifJwtBearerScenario } from './wif-jwt-bearer';
 import {
   OfflineAccessScopeScenario,
   OfflineAccessNotSupportedScenario
@@ -75,5 +76,6 @@ export const draftScenariosList: Scenario[] = [
   new IssParameterNotAdvertisedScenario(),
   new IssParameterSupportedMissingScenario(),
   new IssParameterWrongIssuerScenario(),
-  new IssParameterUnexpectedScenario()
+  new IssParameterUnexpectedScenario(),
+  new WifJwtBearerScenario()
 ];
